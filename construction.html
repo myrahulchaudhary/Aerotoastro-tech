@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Solutions - Aero2Astro Tech </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="solutions.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <script defer src="./assets/js/header.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="solutions.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+</head>
+
+
+<body class="max-w-[2000px]">
+    <div id="headercontainer" class="w-full sticky z-50 top-0 bg-[#080808]">
+        
+  <header class="z-50 h-42 border-b border-b-[#2096b6]  shadow-md lg:pr-16 ">
+    <div class=" flex justify-between items-center py-4 px-6">
+    
+        <a href="index.html" class="flex items-center relative md:w-[250px] w-[200px] h-14  overflow-clip ">
+            <img src="https://ik.imagekit.io/a2akit/a2atech/a2alogo.png" alt="A2A-Logo" class=" z-50 scale-125 ">
+        </a>
+        <nav id="navbar" class="hidden lg:flex space-x-8 items-center">
+            <a class="nav-link text-white hover:text-[#2096b6]" href="index.html">Home</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" href="about.html">About</a>
+            <div class="relative group">
+                <button class="nav-link text-white hover:text-[#2096b6] flex items-center">
+                    Solutions <i class="ml-1 fas fa-chevron-down"></i>
+                </button>
+                <div class="absolute left-0 z-40 top-4 mt-1 hidden group-hover:block bg-white shadow-md rounded-md">
+                    <a href="./engineering.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Engineering</a>
+                    <a href="./construction.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Construction</a>
+                    <a href="./operation.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Operation</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <button class="nav-link text-white hover:text-[#2096b6] flex items-center">
+                    Industries <i class="ml-1 fas fa-chevron-down"></i>
+                </button>
+                <div  class="absolute left-0 z-40 top-4 mt-1 hidden group-hover:block bg-white shadow-md rounded-md">
+                    <a href="infra.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Infrastructure/Construction</a>
+                    <a href="mining.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Mining</a>
+                    <a href="energy.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Energy</a>
+                    <a href="utilities.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Utilities</a>
+                </div>
+            </div>
+            <a class="nav-link text-white hover:text-[#2096b6]" href="comingsoon.html">Pricing</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" target="_blank" href="https://dronepilots.aero2astro.com">For Pilot</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" target="_blank" href="https://aero2astro.com/a2a/blog/">Blogs</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" href="contact.html">Contact Us</a>
+            <a class="getstarted text-white bg-[#111111] border border-[#23a3df] rounded-3xl hover:bg-[#1c1c1c] px-4 py-2 " href="contact.html" onclick="ShowForm()">Get In Touch</a>
+        </nav>
+        <button id="menu-button" class="lg:hidden text-white text-2xl focus:outline-none">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+    <div id="mobile-menu" class="lg:hidden hidden shadow-md">
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="index.html">Home</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="about.html">About</a>
+        <div class="relative group">
+            <button class="block w-full text-left px-4 py-2 text-white hover:bg-[#1c1c1c] flex items-center justify-between">
+                Solutions <i class="ml-1 fas fa-chevron-down"></i>
+            </button>
+            <div class="hidden group-hover:block bg-[#111111] shadow-md rounded-md">
+                <a href="./engineering.html" class="block px-4 py-2 text-white hover:bg-gray-200">Engineering</a>
+                <a href="./construction.html" class="block px-4 py-2 text-white hover:bg-gray-200">Construction</a>
+                <a href="./operation.html" class="block px-4 py-2 text-white hover:bg-gray-200">Operation</a>
+               
+            </div>
+        </div>
+        <div class="relative group">
+            <button class="block w-full text-left px-4 py-2 text-white hover:bg-[#1c1c1c] flex items-center justify-between">
+                Industries <i class="ml-1 fas fa-chevron-down"></i>
+            </button>
+            <div class="hidden group-hover:block bg-[#111111] shadow-md rounded-md">
+                <a href="infra.html" class="block px-4 py-2 text-white hover:bg-gray-200">Infrastructure/Construction</a>
+                <a href="mining.html" class="block px-4 py-2 text-white hover:bg-gray-200">Mining</a>
+                <a href="energy.html" class="block px-4 py-2 text-white hover:bg-gray-200">Energy</a>
+                <a href="utilities.html" class="block px-4 py-2 text-white hover:bg-gray-200">Utilities</a>
+            </div>
+        </div>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="./comingsoon.html">Pricing</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" target="_blank" href="https://dronepilots.aero2astro.com/">For Pilot</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" target="_blank" href="https://aero2astro.com/home/blog/">Blogs</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="contact.html">Contact Us</a>
+        <a class="block px-4 py-2 text-white my-5 mx-2 max-w-[200px] bg-[#111111] border border-[#23a3df] rounded-3xl hover:bg-blue-600" href="contact.html" onclick="ShowForm()">Get In Touch</a>
+    </div>
+</header>
+
+    </div>
+
+
+    <main class="bg-[#080808] text-white ">
+        <div class=" ">
+
+            <div class="relative isolate px-6 pt-14 lg:px-8">
+                <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                    aria-hidden="true">
+                    <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#111111] to-[#23a3df] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                    </div>
+                </div>
+                <div class="mx-auto max-w-3xl  py-20">
+                   
+                    <div class="text-center">
+                        <h1 class="text-4xl  font-bold tracking-tight text-white sm:text-6xl">Solution for <span class="text-[#2096b6]">construction</span>  </h1>
+                        <p class="mt-6 text-lg leading-8text-white">Revolutionize  construction with advanced
+                            GIS-powered software. Enhance productivity and avoid costly errors with our intuitive tools.
+                            Discover a streamlined approach to managing  projects without relying on traditional
+                            spreadsheets.</p>
+                        <div class="mt-10 flex items-center justify-center gap-x-6">
+                            <a href="contact.html"
+                                class="rounded-md bg-[#2096b6] hover:bg-[#166b92] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Request
+                               Free Demo</a>
+                 
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="mt-10">
+                    <img loading="lazy" src="https://ik.imagekit.io/a2akit/a2atech/img4.jpg" class="bg-gray-300 lg:min-w-[800px]  mx-auto md:h-[500px] h-[300px] mb-4"/>  <!-- Placeholder for your image -->
+                    <button class="mt-4 mx-auto block my-10 hidden bg-gradient-to-r from-[#2096b6]  to-[#111111] hover:from-black hover:to-[#2096b6] hover:scale-105 duration-500 border border-[#2096b6] py-2 px-4 rounded-full">Watch the full video (2 min)</button>
+                </div>
+                
+                <div class="absolute  inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+                    aria-hidden="true">
+                    <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#111111] to-[#23a3df] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Explore the Solutions Section -->
+        <section class="py-20 lg:mx-20 relative p-5">
+            <div class="mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Streamline Progress Tracking and Compliance</h2>
+                <p class="text-lg mb-10 max-w-[550px] mx-auto">Save time and increase accountability with clear visibility into project progress at every stage.
+
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mx-5 items-center">
+                    <div>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gradient-to-r from-[#2096b6] hover:scale-105 duration-500 to-[#1c1c1c] shadow rounded-lg">
+                                <h3 class="font-bold my-2 md:text-xl  text-lg">Visual Progress Tracking</h3>
+                                <p class="max-w-[550px] mx-auto">Monitor project stages visually, ensuring transparency and accountability.</p>
+                            </div >
+                            <div class="p-4 bg-gradient-to-r from-[#2096b6] hover:scale-105 duration-500 to-[#1c1c1c] shadow rounded-lg">
+                                <h3 class="font-bold my-2 md:text-xl text-lg">Automated Reporting</h3>
+                                <p class="max-w-[550px] mx-auto">Generate detailed reports effortlessly, saving time and resources.</p>
+                            </div>
+                            <div class="p-4 bg-gradient-to-r from-[#2096b6] hover:scale-105 duration-500 to-[#1c1c1c] shadow rounded-lg">
+                                <h3 class="font-bold my-2 md:text-xl text-lg">AI-Powered Analysis</h3>
+                                <p class="max-w-[550px] mx-auto">Utilize drone data for advanced analytics, optimizing decision-making processes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img loading="lazy" src="https://ik.imagekit.io/a2akit/a2atech/cons3.jpg" alt="tracking" class="bg-gray-300 w-full h-96" />
+                    <!-- Placeholder for your image -->
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-20 lg:mx-20 relative p-5">
+            <div class="mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Ensure Precision and Quality with Accurate Site Monitoring</h2>
+                <p class="text-lg mb-10">Track deviations from design in real-time to minimize rework and uphold construction excellence.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mx-5 items-center">
+                    <img loading="lazy" src="https://ik.imagekit.io/a2akit/a2atech/cons2.jpg" alt="precision" class="bg-gray-300 w-full h-96"> <!-- Placeholder for your image -->
+        
+                    <div>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gradient-to-r from-[#2096b6] hover:scale-105 duration-500 to-[#1c1c1c] shadow rounded-lg">
+                                <h3 class="font-bold my-2 md:text-xl text-lg">As-Built Comparison</h3>
+                                <p class="max-w-[550px] mx-auto">Overlay and compare as-built structures against CAD designs for accurate assessment and quality control.</p>
+                            </div>
+                            <div class="p-4 bg-gradient-to-r from-[#2096b6] hover:scale-105 duration-500 to-[#1c1c1c] shadow rounded-lg">
+                                <h3 class="font-bold my-2 md:text-xl text-lg">Mobile Punch Lists</h3>
+                                <p class="max-w-[550px] mx-auto">Efficiently capture and manage issues on-site with mobile-enabled punch lists, ensuring swift resolution.</p>
+                            </div>
+                            <div class="p-4 bg-gradient-to-r from-[#2096b6] hover:scale-105 duration-500 to-[#1c1c1c] shadow rounded-lg">
+                                <h3 class="font-bold my-2 md:text-xl text-lg">Advanced 3D Measurements</h3>
+                                <p class="max-w-[550px] mx-auto">Perform precise 3D measurements for change orders, optimizing project accuracy and cost efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 lg:mx-20 relative p-5">
+            <div class="mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Enhance Quality Control and Expedite Handover Processes</h2>
+                <p class="text-lg mb-10 max-w-[550px] mx-auto">Optimize QC procedures and streamline project handovers with comprehensive data capture and management.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mx-5 items-center">
+                    <div>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gradient-to-r from-[#2096b6] hover:scale-105 duration-500 to-[#1c1c1c] shadow rounded-lg">
+                                <h3 class="font-bold my-2 md:text-xl text-lg">Digital QC Management</h3>
+                                <p class="max-w-[550px] mx-auto">Utilize digital forms and task management to oversee QC processes for every component on-site, ensuring thorough inspection and compliance.</p>
+                            </div>
+                            <div class="p-4 bg-gradient-to-r from-[#2096b6] hover:scale-105 duration-500 to-[#1c1c1c] shadow rounded-lg">
+                                <h3 class="font-bold my-2 md:text-xl text-lg">Accurate As-Built Plans</h3>
+                                <p class="max-w-[550px] mx-auto">Generate precise as-built plans with serial number registration to document project details comprehensively.</p>
+                            </div>
+                            <div class="p-4 bg-gradient-to-r from-[#2096b6] hover:scale-105 duration-500 to-[#1c1c1c] shadow rounded-lg">
+                                <h3 class="font-bold my-2 md:text-xl text-lg">Performance Baselines</h3>
+                                <p class="max-w-[550px] mx-auto">Establish performance benchmarks using visual, thermal, and electroluminescence inspections, ensuring optimal system functionality.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img loading="lazy" src="https://ik.imagekit.io/a2akit/a2atech/cons1.jpg"  alt="process" class="bg-gray-300 w-full h-96"/><!-- Placeholder for your image -->
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- How Simple Works Section -->
+        <section class="py-20  lg:mx-20 relative px-5 ">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Feature Highlights</h2>
+                <p class="text-lg mb-10">Explore the advanced features that make our platform the ideal choice for  site management.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:p-10">
+                    <div class="bg-[#111111] border border-[#2096b6] p-6 rounded-lg shadow-md">
+                        <div class="w-16 h-16 mb-4 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="text-[#2096b6]">
+                                <path d="M12 2a1 1 0 0 1 .832.445l8 12a1 1 0 0 1-.832 1.555H4a1 1 0 0 1-.832-1.555l8-12A1 1 0 0 1 12 2zm0 2.618L5.618 14h12.764L12 4.618zM12 18a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Online 3D Viewer</h3>
+                        <p>Visualize your entire site in 3D right inside your browser. No software installation required.</p>
+                    </div>
+                    <div class="bg-[#111111] border border-[#2096b6] p-6 rounded-lg shadow-md">
+                        <div class="w-16 h-16 mb-4 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="text-[#2096b6]">
+                                <path d="M19 9h-4V3H9v6H5L12 16l7-7zM5 18h14v2H5v-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">CAD Design Files</h3>
+                        <p>Upload your CAD design files and visualize them instantly in your browser.</p>
+                    </div>
+                    <div class="bg-[#111111] border border-[#2096b6] p-6 rounded-lg shadow-md">
+                        <div class="w-16 h-16 mb-4 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="text-[#2096b6]">
+                                <path d="M21 5V3H3v2h18zm-2 4H5v2h14V9zm-2 4H7v2h10v-2zm-2 4H9v2h6v-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Serial Numbers</h3>
+                        <p>Capture each component’s serial number in a structured digital twin.</p>
+                    </div>
+                    <div class="bg-[#111111] border border-[#2096b6] p-6 rounded-lg shadow-md">
+                        <div class="w-16 h-16 mb-4 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="text-[#2096b6]">
+                                <path d="M19 2h-5.5L12 4H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 16H5V6h7v4h7v8zm-6-2H7v-2h6v2zm0-4H7V8h6v4zm6 6h-3v-2h3v2zm-3-4h3v-2h-3v2zm3-6h-3V8h3v2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Custom Reports</h3>
+                        <p>Generate reports on the fly and choose exactly the information you want to include.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Call to Action Section -->
+        <section class="py-20 md:mx-3  px-5 max-sm:text-center mx-1">
+            <div class="container mx-auto  flex gap-10 items-center flex-wrap justify-center">
+                <div class="inline-block ">
+                    <h2 class="text-4xl font-bold mb-6 max-w-[800px]"><span class="text-[#2096b6]">Accelerate </span>your  design process today
+                    </h2>
+                <p class="text-lg max-w-[400px]">Our team is ready to answer your questions and show you Sitemark during a live demo.</p>
+            </div>
+            <a href="contact.html" class="bg-[#2096b6] hover:bg-[#166b92] text-white py-2 px-6 rounded-full ml-2 min-w-fit">Request a Demo</a>
+            </div>
+        </section>
+    
+
+
+
+    </main>
+    <div id="footer">
+        
+
+        <footer class=" bg-[#0a0a09] text-white ">
+            <div class=" py-10 p-5 lg:px-20 md:px-10 mx-auto flex flex-col md:flex-row justify-between">
+              <div class="mb-8 md:mb-0">
+                <h1 class="text-2xl font-bold text-white mb-2">
+                  <span class="text-[#209dd8]">#</span>aero<span class="text-[#209dd8] m-0">2</span>astro
+                </h1>
+                <p class="text-gray-400">Think. Innovate. Explore.</p>
+                <blockquote class="mt-4 text-gray-500 max-w-[400px]">
+                 
+                  "Outstanding people have one thing in common: an absolute sense of mission
+      -Zig Ziglar"
+                  <br />
+                  <br />
+      
+                 
+                </blockquote>
+                 <a href="mailto:flywithus@aero2astro.com" class=" mt-5 block font-bold text-[#209dd8]"><MailFilled class="mr-2"/>flywithus@aero2astro.com</a>
+                
+              </div>
+              <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-20 md:mr-20">
+                <div>
+                  <h2 class="text-gray-400 mb-4">CORPORATE</h2>
+                  <ul class="space-y-2">
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/contact" class="text-white hover:text-gray-400">Contact Us</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/corporate/Careers" class="text-white hover:text-gray-400">Careers</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/corporate/Internship" class="text-white hover:text-gray-400">Internships</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/contact/appointment" class="text-white hover:text-gray-400">Schedule an appointment</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 class="text-gray-400 mb-4">INNOVATION LABZ</h2>
+                  <ul class="space-y-2">
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Shop</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/mayvi" class="text-white hover:text-gray-400">Mayvi</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Learn to fly</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Aeromodelling Club</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 class="text-gray-400 mb-4">TERMS</h2>
+                  <ul class="space-y-2">
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Privacy Policy</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Cookies Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+              <div class="p-5 md:px-10 border-t-[1px] border-t-[#209dd8]">
+                <p class="font-thin text-center">Copyright &copy; 2024 <a target="_blank" href="https://aero2astro.com" class="font-semibold text-[#209dd8]">
+                Aero2Astro </a></p>
+              </div>
+      
+        
+      
+      </footer>
+          
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+
+</html>

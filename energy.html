@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Industry - Aero2Astro Tech </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="solutions.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="solutions.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script defer src="./assets/js/header.js"></script>
+
+</head>
+
+<body class="max-w-[2000px] lg:mx-auto bg-[#080808] ">
+
+    <div id="headercontainer" class="w-full z-50 sticky top-0 bg-[#080808]">
+        
+  <header class="z-50 h-42 border-b border-b-[#2096b6]  shadow-md lg:pr-16 ">
+    <div class=" flex justify-between items-center py-4 px-6">
+    
+        <a href="index.html" class="flex items-center relative md:w-[250px] w-[200px] h-14  overflow-clip ">
+            <img src="https://ik.imagekit.io/a2akit/a2atech/a2alogo.png" alt="A2A-Logo" class=" z-50 scale-125 ">
+        </a>
+        <nav id="navbar" class="hidden lg:flex space-x-8 items-center">
+            <a class="nav-link text-white hover:text-[#2096b6]" href="index.html">Home</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" href="about.html">About</a>
+            <div class="relative group">
+                <button class="nav-link text-white hover:text-[#2096b6] flex items-center">
+                    Solutions <i class="ml-1 fas fa-chevron-down"></i>
+                </button>
+                <div class="absolute left-0 z-40 top-4 mt-1 hidden group-hover:block bg-white shadow-md rounded-md">
+                    <a href="./engineering.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Engineering</a>
+                    <a href="./construction.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Construction</a>
+                    <a href="./operation.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Operation</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <button class="nav-link text-white hover:text-[#2096b6] flex items-center">
+                    Industries <i class="ml-1 fas fa-chevron-down"></i>
+                </button>
+                <div  class="absolute left-0 z-40 top-4 mt-1 hidden group-hover:block bg-white shadow-md rounded-md">
+                    <a href="infra.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Infrastructure/Construction</a>
+                    <a href="mining.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Mining</a>
+                    <a href="energy.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Energy</a>
+                    <a href="utilities.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Utilities</a>
+                </div>
+            </div>
+            <a class="nav-link text-white hover:text-[#2096b6]" href="comingsoon.html">Pricing</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" target="_blank" href="https://dronepilots.aero2astro.com">For Pilot</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" target="_blank" href="https://aero2astro.com/a2a/blog/">Blogs</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" href="contact.html">Contact Us</a>
+            <a class="getstarted text-white bg-[#111111] border border-[#23a3df] rounded-3xl hover:bg-[#1c1c1c] px-4 py-2 " href="contact.html" onclick="ShowForm()">Get In Touch</a>
+        </nav>
+        <button id="menu-button" class="lg:hidden text-white text-2xl focus:outline-none">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+    <div id="mobile-menu" class="lg:hidden hidden shadow-md">
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="index.html">Home</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="about.html">About</a>
+        <div class="relative group">
+            <button class="block w-full text-left px-4 py-2 text-white hover:bg-[#1c1c1c] flex items-center justify-between">
+                Solutions <i class="ml-1 fas fa-chevron-down"></i>
+            </button>
+            <div class="hidden group-hover:block bg-[#111111] shadow-md rounded-md">
+                <a href="./engineering.html" class="block px-4 py-2 text-white hover:bg-gray-200">Engineering</a>
+                <a href="./construction.html" class="block px-4 py-2 text-white hover:bg-gray-200">Construction</a>
+                <a href="./operation.html" class="block px-4 py-2 text-white hover:bg-gray-200">Operation</a>
+               
+            </div>
+        </div>
+        <div class="relative group">
+            <button class="block w-full text-left px-4 py-2 text-white hover:bg-[#1c1c1c] flex items-center justify-between">
+                Industries <i class="ml-1 fas fa-chevron-down"></i>
+            </button>
+            <div class="hidden group-hover:block bg-[#111111] shadow-md rounded-md">
+                <a href="infra.html" class="block px-4 py-2 text-white hover:bg-gray-200">Infrastructure/Construction</a>
+                <a href="mining.html" class="block px-4 py-2 text-white hover:bg-gray-200">Mining</a>
+                <a href="energy.html" class="block px-4 py-2 text-white hover:bg-gray-200">Energy</a>
+                <a href="utilities.html" class="block px-4 py-2 text-white hover:bg-gray-200">Utilities</a>
+            </div>
+        </div>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="./comingsoon.html">Pricing</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" target="_blank" href="https://dronepilots.aero2astro.com/">For Pilot</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" target="_blank" href="https://aero2astro.com/home/blog/">Blogs</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="contact.html">Contact Us</a>
+        <a class="block px-4 py-2 text-white my-5 mx-2 max-w-[200px] bg-[#111111] border border-[#23a3df] rounded-3xl hover:bg-blue-600" href="contact.html" onclick="ShowForm()">Get In Touch</a>
+    </div>
+</header>
+
+    </div>
+
+
+
+
+
+    <main id="main_container" class=" bg-[#080808] text-white ">
+
+       
+        <section  class="hero_section relative min-h-[700px] px-8 bg-black overflow-clip  flex items-center max-md:justify-center">
+
+            <img src="https://ik.imagekit.io/a2akit/a2atech/energy.jpg" alt="Energy solar, windmill aero2astro" loading="lazy" class="absolute  h-full w-full  opacity-20 inset-0">
+            <div data-aos="fade-up"  data-aos-duration="1000" class="hero_content_container max-w-[700px] lg:mx-32 my-10 flex flex-col  text-lg gap-3 h-full bg-opacity-30   z-20">
+                <h1 class="md:text-5xl text-3xl text-white font-bold">
+                    Ensuring the <span class="text-[#23a3df]">Energy Sector</span> and infrastructure with Drone
+                    Technology </h1>
+
+                <p class="my-3">
+                    Drones are not just tools for visual inspection; they are platforms for advanced sensors that
+                    measure everything from thermal signatures to gas leaks. This capability allows for a comprehensive
+                    health assessment of energy infrastructure, providing crucial data that informs the maintenance
+                    schedules and safety standards of the facilities.
+
+                </p>
+                <a href="contact.html"
+                    class="my-5 inline-block w-fit rounded-md bg-[#23a3df] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#23a3df] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
+                    a
+                    Free Demo</a>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="sec_2 bg-[#0c0c0c] flex items-center 
+        justify-center mb-10 py-8 lg:h-[300px] h-[400px] md:text-3xl text-xl px-8 text-center">
+            <p class="md:max-w-[90%] ">
+                We understand the pivotal role data plays in optimizing the processes.
+                <br> Our drone solutions go beyond capturing aerial imagery; they provide actionable insights that drive
+                informed decision-making at every stage of the mining lifecycle.
+            </p>
+        </section>
+
+
+
+        <!-- Section 2  -->
+        <div class=" mx-auto lg:mx-32 py-16 px-4">
+            <!-- Section 2 -->
+            <div>
+                <section class="flex relative justify-between items-center flex-wrap lg:justify-center">
+                    <div class=" md:w-1/2 p-8">
+                        <h2 id="prod-title" class="text-[#23a3df] text-sm font-bold mb-4">INSPECTION & ACCURACY</h2>
+                        <h3 id="prod-subtitle" class="text-3xl font-semibold mb-4 " data-aos-duration="1000"
+                            data-aos="zoom-in">400% Faster Energy Site Inspections with Speed, Safety, and Accuracy</h3>
+                        <p id="prod-text" class="text-gray-400 mb-6">Aero2Astro offers a comprehensive suite of drone
+                            services for your business needs, from site assessments to 3D mapping and thermal imaging.
+                            We can help you cut costs by eliminating unnecessary equipment purchases, reducing risk
+                            through accurate data capture, improving efficiency with our automated workflow tools, and
+                            increasing accuracy through real-time monitoring capabilities.</p>
+                        <!-- <button id="prod-button"
+                            class="bg-[#23a3df] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#23a6df] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 transition duration-300">
+                            Enable Production
+                        </button> -->
+                    </div>
+                    <div class="w-full md:w-1/2 p-8 flex justify-center">
+                        <!-- Image space -->
+                        <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                            <img src="https://ik.imagekit.io/a2akit/a2atech/en2.jpg" loading="lazy" class="text-gray-500" />
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Section 3  -->
+        <div class=" lg:mx-32 mx-auto py-16 px-4">
+            <!-- Section 2 -->
+            <div>
+                <section
+                    class="flex flex-row-reverse relative justify-between items-center flex-wrap lg:justify-center">
+                    <div class="md:w-1/2 p-8">
+                        <h2 id="prod-title" class="text-[#23a3df] text-sm font-bold mb-4">MONITORING & OPERATIONS</h2>
+                        <h3 id="prod-subtitle" class="text-3xl font-semibold mb-4" data-aos-duration="1000"
+                            data-aos="zoom-in">Manage the Wind Turbines, Pipelines, Solar Panels and More</h3>
+                        <p id="prod-text" class="text-gray-400 mb-6">Inspect multiple turbines, Solar panels
+                            with a drone with ease on our platform and save your precious time.
+                            <br>
+                            Pipelines run through remote areas that are difficult to access. Using drones can also speed up the process of asset inspections 
+                        
+                        </p>
+                        <!-- <button id="prod-button"
+                            class="bg-[#23a3df] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#23a6df] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50 transition duration-300">
+                            Enable Production
+                        </button> -->
+                    </div>
+                    <div class="w-full md:w-1/2 p-8 flex justify-center">
+                        <!-- Image space -->
+                        <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                            <img src="https://ik.imagekit.io/a2akit/a2atech/en3.jpg" loading="lazy" class="text-gray-500" />
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Why Trust US / Benefits -->
+        <div class="mx-auto lg:px-36 py-28 px-4 bg-[#111111]">
+            <h1 class="lg:text-5xl text-3xl font-bold mb-10 text-center pb-14">Why trust us?</h1>
+
+            <div class="space-y-10">
+                <div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div
+                            class="shadow border border-[cyan] bg-[#0c0c0c] hover:bg-gradient-to-r from-[#0c0c0c] to-[#1d2929] rounded-lg p-5 py-10">
+                            <p class="font-semibold mb-2 text-[skyblue]">📈 Enhanced Data Quality</p>
+                            <p>We ensure that the data we provide is accurate, reliable, and up-to-date, giving you
+                                confidence in your decisions.</p>
+                        </div>
+                        <div
+                            class="shadow border border-[cyan] bg-[#0c0c0c] hover:bg-gradient-to-r from-[#0c0c0c] to-[#1d2929] rounded-lg p-5 py-10">
+                            <p class="font-semibold mb-2 text-[skyblue]">📡 Real-time Monitoring</p>
+                            <p>Stay informed with our real-time monitoring services that keep you updated on the latest
+                                developments and changes.</p>
+                        </div>
+                        <div
+                            class="shadow border border-[cyan] bg-[#0c0c0c] hover:bg-gradient-to-r from-[#0c0c0c] to-[#1d2929] rounded-lg p-5 py-10">
+                            <p class="font-semibold mb-2 text-[skyblue]">🤝 Enhanced Collaboration for Stakeholders</p>
+                            <p>Our platform fosters better collaboration among stakeholders, ensuring that everyone is
+                                on the same page and working towards common goals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div
+                            class="shadow border border-[cyan] bg-[#0c0c0c] hover:bg-gradient-to-r from-[#0c0c0c] to-[#1d2929] rounded-lg p-5 py-10">
+                            <p class="font-semibold mb-2 text-[skyblue]">🛡️ Enhanced Safety</p>
+                            <p>We prioritize safety in all our operations, ensuring that your data and operations are
+                                secure and protected.</p>
+                        </div>
+                        <div
+                            class="shadow border border-[cyan] bg-[#0c0c0c] hover:bg-gradient-to-r from-[#0c0c0c] to-[#1d2929] rounded-lg p-5 py-10">
+                            <p class="font-semibold mb-2 text-[skyblue]">💰 Cost Efficiency</p>
+                            <p>Our solutions are designed to be cost-effective, helping you save money while still
+                                getting the best service possible.</p>
+                        </div>
+                        <div
+                            class="shadow border border-[cyan] bg-[#0c0c0c] hover:bg-gradient-to-r from-[#0c0c0c] to-[#1d2929] rounded-lg p-5 py-10">
+                            <p class="font-semibold mb-2 text-[skyblue]">🔧 Streamlining Workflows</p>
+                            <p>We streamline workflows to improve efficiency and productivity, allowing you to focus on
+                                what matters most.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+
+        <!-- How IT WORKS -->
+        <div class="hidden w-full min-h-screen flex justify-center items-center py-20">
+            <div class="w-full lg:max-w-6xl px-6">
+                <h1 class="text-4xl lg:text-6xl font-bold md:mb-20 mb-8 text-center ">HOW IT WORKS</h1>
+                <div class="mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
+                    <div class="max-w-full lg:max-w-[300px] p-4 rounded-lg shadow-md">
+                        <div id="tabs" class="space-y-4 flex flex-col justify-center h-full">
+                            <div class="tab p-4 border rounded-lg cursor-pointer active-tab" data-project="0">
+                                Stockpile Volume Sample</div>
+                            <div class="tab p-4  border rounded-lg cursor-pointer" data-project="1">Rewa Cement Works
+                            </div>
+                            <div class="tab p-4 border rounded-lg cursor-pointer" data-project="2">Bellary Mines</div>
+                            <div class="tab p-4 border rounded-lg cursor-pointer" data-project="3">Sundargarh Coal
+                                Mines</div>
+                        </div>
+                    </div>
+                    <div class="col-span-1 lg:col-span-2 rounded-lg overflow-hidden relative">
+                        <img id="map" class="w-full h-auto object-cover"
+                            src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="Map Image"
+                            loading="lazy">
+                        <div id="descriptions"
+                            class="absolute inset-0 bg-black bg-opacity-70 hidden lg:flex flex-col justify-center items-center text-center text-white p-8 rounded-lg">
+                            <h2 id="project-title" class="text-3xl font-bold mb-4">Stockpile Volume Sample</h2>
+                            <p id="project-description" class="text-lg">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh
+                                ultricies vehicula ut id elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const tabs = document.querySelectorAll('.tab');
+                const map = document.getElementById('map');
+                const images = [
+                    'https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg',
+                    'https://cdn.pixabay.com/photo/2015/11/16/16/28/bird-1045954_640.jpg',
+                    'https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_640.jpg',
+                    'https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg'
+                ];
+
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        tabs.forEach(t => t.classList.remove('active-tab'));
+                        tab.classList.add('active-tab');
+
+                        const projectIndex = tab.getAttribute('data-project');
+                        gsap.to(map, {
+                            opacity: 0, duration: 0.2, onComplete: () => {
+                                map.src = images[projectIndex];
+                                gsap.to(map, { opacity: 1, duration: 0.5 });
+                            }
+                        });
+                    });
+                });
+
+                gsap.registerPlugin(ScrollTrigger);
+
+                gsap.from("#tabs .tab", {
+                    opacity: 0,
+                    y: 50,
+                    stagger: 0.2,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: "#tabs",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none none",
+                    }
+                });
+
+                gsap.from("#map", {
+                    opacity: 0,
+                    x: -50,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: "#map",
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none none",
+                    }
+                });
+            });
+        </script>
+        <style>
+            .tab {
+                transition: border-bottom-color 0.3s ease;
+            }
+
+            .tab:hover {
+                background-color: #1c1c1c;
+
+                border-bottom-color: #23a3df;
+
+            }
+
+            .active-tab {
+                background-color: #1c1c1c;
+
+                border-bottom-color: #23a3df;
+
+            }
+
+            .project-description {
+                display: none;
+            }
+
+            .project-description.active {
+                display: block;
+            }
+        </style>
+
+
+
+
+        <div data-aos-duration="2000" data-aos="zoom-in"
+            class="md:mx-32 mx-3 py-10 border border-cyan-500 my-20 rounded-3xl"
+            style="background: linear-gradient(190deg, #1c1c1c,#1c1c1c, #075f7a);">
+            <h2 class="text-center my-5 lg:text-4xl text-2xl font-semibold text-white">Partnering for Success</h2>
+            <p class="p-10 text-lg text-white"> At Aero2astro, we believe in forging strong partnerships with our
+                clients. We work closely with solar & windmill
+                companies to understand their unique challenges and tailor our drone solutions to meet their specific
+                needs.
+                From initial consultation to ongoing support, we are committed to delivering results that exceed
+                expectations and drive long-term success.</p>
+        </div>
+
+
+
+
+
+
+        <!-- PRICING -->
+
+        <section class="hidden bg-[#111111] my-10 ">
+            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+                <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold  ">Designed for business teams like yours
+                    </h2>
+                    <p class="mb-5 font-light text-gray-500 sm:text-xl ">Here at Flowbite we focus on markets where
+                        technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+                </div>
+                <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+                    <!-- Pricing Card -->
+                    <div
+                        class="flex flex-col p-6 mx-auto max-w-lg text-center  rounded-lg border border-[#23a3df] shadow  xl:p-8 bg-[#1e1e1e] ">
+                        <h3 class="mb-4 text-2xl font-semibold">Starter</h3>
+                        <p class="font-light text-gray-500 sm:text-lg ">Best option for personal use & for your next
+                            project.</p>
+                        <div class="flex justify-center items-baseline my-8">
+                            <span class="mr-2 text-5xl font-extrabold">$29</span>
+                            <span class="text-gray-500 ">/month</span>
+                        </div>
+                        <!-- List -->
+                        <ul role="list" class="mb-8 space-y-4 text-left">
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Individual configuration</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>No setup, or hidden fees</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Team size: <span class="font-semibold">1 developer</span></span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Premium support: <span class="font-semibold">6 months</span></span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Free updates: <span class="font-semibold">6 months</span></span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="text-white bg-[#23a3df] hover:bg-[#2066cc] focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center   focus:ring-primary-900">Get
+                            started</a>
+                    </div>
+                    <!-- Pricing Card -->
+                    <div
+                        class="flex flex-col p-6 mx-auto max-w-lg text-center  rounded-lg border border-[#23a3df] shadow  xl:p-8 bg-[#1e1e1e] ">
+                        <h3 class="mb-4 text-2xl font-semibold">Company</h3>
+                        <p class="font-light text-gray-500 sm:text-lg ">Relevant for multiple users, extended & premium
+                            support.</p>
+                        <div class="flex justify-center items-baseline my-8">
+                            <span class="mr-2 text-5xl font-extrabold">$99</span>
+                            <span class="text-gray-500 ">/month</span>
+                        </div>
+                        <!-- List -->
+                        <ul role="list" class="mb-8 space-y-4 text-left">
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Individual configuration</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>No setup, or hidden fees</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Team size: <span class="font-semibold">10 developers</span></span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Premium support: <span class="font-semibold">24 months</span></span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Free updates: <span class="font-semibold">24 months</span></span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="text-white bg-[#23a3df] hover:bg-[#2066cc] focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center   focus:ring-primary-900">Get
+                            started</a>
+                    </div>
+                    <!-- Pricing Card -->
+                    <div
+                        class="flex flex-col p-6 mx-auto max-w-lg text-center  rounded-lg border border-[#23a3df] shadow  xl:p-8 bg-[#1e1e1e] ">
+                        <h3 class="mb-4 text-2xl font-semibold">Enterprise</h3>
+                        <p class="font-light text-gray-500 sm:text-lg ">Best for large scale uses and extended
+                            redistribution rights.</p>
+                        <div class="flex justify-center items-baseline my-8">
+                            <span class="mr-2 text-5xl font-extrabold">$499</span>
+                            <span class="text-gray-500 ">/month</span>
+                        </div>
+                        <!-- List -->
+                        <ul role="list" class="mb-8 space-y-4 text-left">
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Individual configuration</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>No setup, or hidden fees</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Team size: <span class="font-semibold">100+ developers</span></span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Premium support: <span class="font-semibold">36 months</span></span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <!-- Icon -->
+                                <svg class="flex-shrink-0 w-5 h-5 text-green-500 text-green-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span>Free updates: <span class="font-semibold">36 months</span></span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="text-white bg-[#23a3df] hover:bg-[#2066cc] focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center   focus:ring-primary-900">Get
+                            started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join us -->
+        <div class=" py-16 px-4 lg:mx-32">
+            <div class="flex flex-col md:flex-row items-center  lg:p-8 rounded-lg overflow-hidden w-full">
+                <div class="md:w-1/2 w-full p-6">
+                    <h2 id="cta-title" class="text-4xl font-bold mb-4 text-white">Experience the Difference</h2>
+                    <p id="cta-text" class="mb-10 text-[#23a3df]">Join the ranks of forward-thinking companies
+                        that are embracing the future of mining with drone technology. Contact us today to learn more
+                        about how Aero2Astro can help elevate your operations with actionable insights and unparalleled
+                        efficiency </p>
+                    <a href="contact.html" id="cta-button"
+                        class="bg-[#23a3df] py-5 px-6 rounded-full text-white font-semibold hover:bg-[#166b92] transition duration-300 shadow-md">Get
+                        Started</a>
+                </div>
+                <div class="md:w-1/2 w-full md:p-6">
+                    <img id="cta-image" src="https://ik.imagekit.io/a2akit/a2atech/energy.jpg" alt="CTA Image"
+                        class="rounded-lg shadow-lg transform transition duration-500 hover:scale-105 w-full">
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+    <div id="footer">
+        
+
+        <footer class=" bg-[#0a0a09] text-white ">
+            <div class=" py-10 p-5 lg:px-20 md:px-10 mx-auto flex flex-col md:flex-row justify-between">
+              <div class="mb-8 md:mb-0">
+                <h1 class="text-2xl font-bold text-white mb-2">
+                  <span class="text-[#209dd8]">#</span>aero<span class="text-[#209dd8] m-0">2</span>astro
+                </h1>
+                <p class="text-gray-400">Think. Innovate. Explore.</p>
+                <blockquote class="mt-4 text-gray-500 max-w-[400px]">
+                 
+                  "Outstanding people have one thing in common: an absolute sense of mission
+      -Zig Ziglar"
+                  <br />
+                  <br />
+      
+                 
+                </blockquote>
+                 <a href="mailto:flywithus@aero2astro.com" class=" mt-5 block font-bold text-[#209dd8]"><MailFilled class="mr-2"/>flywithus@aero2astro.com</a>
+                
+              </div>
+              <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-20 md:mr-20">
+                <div>
+                  <h2 class="text-gray-400 mb-4">CORPORATE</h2>
+                  <ul class="space-y-2">
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/contact" class="text-white hover:text-gray-400">Contact Us</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/corporate/Careers" class="text-white hover:text-gray-400">Careers</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/corporate/Internship" class="text-white hover:text-gray-400">Internships</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/contact/appointment" class="text-white hover:text-gray-400">Schedule an appointment</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 class="text-gray-400 mb-4">INNOVATION LABZ</h2>
+                  <ul class="space-y-2">
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Shop</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/mayvi" class="text-white hover:text-gray-400">Mayvi</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Learn to fly</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Aeromodelling Club</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 class="text-gray-400 mb-4">TERMS</h2>
+                  <ul class="space-y-2">
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Privacy Policy</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Cookies Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+              <div class="p-5 md:px-10 border-t-[1px] border-t-[#209dd8]">
+                <p class="font-thin text-center">Copyright &copy; 2024 <a target="_blank" href="https://aero2astro.com" class="font-semibold text-[#209dd8]">
+                Aero2Astro </a></p>
+              </div>
+      
+        
+      
+      </footer>
+          
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+
+</html>

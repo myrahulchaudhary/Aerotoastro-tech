@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aero2Astro Tech Solutions</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="solutions.js" defer></script> -->
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <script src="./assets/js/header.js" defer> </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <script defer src="./assets/js/header.js"></script>
+ 
+</head>
+
+
+<body class="max-w-[2000px]">
+    <div id="headercontainer" class="w-full sticky z-50 top-0 bg-[#080808]">
+        
+  <header class="z-50 h-42 border-b border-b-[#2096b6]  shadow-md lg:pr-16 ">
+    <div class=" flex justify-between items-center py-4 px-6">
+    
+        <a href="index.html" class="flex items-center relative md:w-[250px] w-[200px] h-14  overflow-clip ">
+            <img src="https://ik.imagekit.io/a2akit/a2atech/a2alogo.png" alt="A2A-Logo" class=" z-50 scale-125 ">
+        </a>
+        <nav id="navbar" class="hidden lg:flex space-x-8 items-center">
+            <a class="nav-link text-white hover:text-[#2096b6]" href="index.html">Home</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" href="about.html">About</a>
+            <div class="relative group">
+                <button class="nav-link text-white hover:text-[#2096b6] flex items-center">
+                    Solutions <i class="ml-1 fas fa-chevron-down"></i>
+                </button>
+                <div class="absolute left-0 z-40 top-4 mt-1 hidden group-hover:block bg-white shadow-md rounded-md">
+                    <a href="./engineering.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Engineering</a>
+                    <a href="./construction.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Construction</a>
+                    <a href="./operation.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Operation</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <button class="nav-link text-white hover:text-[#2096b6] flex items-center">
+                    Industries <i class="ml-1 fas fa-chevron-down"></i>
+                </button>
+                <div  class="absolute left-0 z-40 top-4 mt-1 hidden group-hover:block bg-white shadow-md rounded-md">
+                    <a href="infra.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Infrastructure/Construction</a>
+                    <a href="mining.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Mining</a>
+                    <a href="energy.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Energy</a>
+                    <a href="utilities.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Utilities</a>
+                </div>
+            </div>
+            <a class="nav-link text-white hover:text-[#2096b6]" href="comingsoon.html">Pricing</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" target="_blank" href="https://dronepilots.aero2astro.com">For Pilot</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" target="_blank" href="https://aero2astro.com/a2a/blog/">Blogs</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" href="contact.html">Contact Us</a>
+            <a class="getstarted text-white bg-[#111111] border border-[#23a3df] rounded-3xl hover:bg-[#1c1c1c] px-4 py-2 " href="contact.html" onclick="ShowForm()">Get In Touch</a>
+        </nav>
+        <button id="menu-button" class="lg:hidden text-white text-2xl focus:outline-none">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+    <div id="mobile-menu" class="lg:hidden hidden shadow-md">
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="index.html">Home</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="about.html">About</a>
+        <div class="relative group">
+            <button class="block w-full text-left px-4 py-2 text-white hover:bg-[#1c1c1c] flex items-center justify-between">
+                Solutions <i class="ml-1 fas fa-chevron-down"></i>
+            </button>
+            <div class="hidden group-hover:block bg-[#111111] shadow-md rounded-md">
+                <a href="./engineering.html" class="block px-4 py-2 text-white hover:bg-gray-200">Engineering</a>
+                <a href="./construction.html" class="block px-4 py-2 text-white hover:bg-gray-200">Construction</a>
+                <a href="./operation.html" class="block px-4 py-2 text-white hover:bg-gray-200">Operation</a>
+               
+            </div>
+        </div>
+        <div class="relative group">
+            <button class="block w-full text-left px-4 py-2 text-white hover:bg-[#1c1c1c] flex items-center justify-between">
+                Industries <i class="ml-1 fas fa-chevron-down"></i>
+            </button>
+            <div class="hidden group-hover:block bg-[#111111] shadow-md rounded-md">
+                <a href="infra.html" class="block px-4 py-2 text-white hover:bg-gray-200">Infrastructure/Construction</a>
+                <a href="mining.html" class="block px-4 py-2 text-white hover:bg-gray-200">Mining</a>
+                <a href="energy.html" class="block px-4 py-2 text-white hover:bg-gray-200">Energy</a>
+                <a href="utilities.html" class="block px-4 py-2 text-white hover:bg-gray-200">Utilities</a>
+            </div>
+        </div>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="./comingsoon.html">Pricing</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" target="_blank" href="https://dronepilots.aero2astro.com/">For Pilot</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" target="_blank" href="https://aero2astro.com/home/blog/">Blogs</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="contact.html">Contact Us</a>
+        <a class="block px-4 py-2 text-white my-5 mx-2 max-w-[200px] bg-[#111111] border border-[#23a3df] rounded-3xl hover:bg-blue-600" href="contact.html" onclick="ShowForm()">Get In Touch</a>
+    </div>
+</header>
+
+    </div>
+
+    <main class="bg-[#080808] text-white ">
+
+
+        <div class=" ">
+
+            <div class="relative isolate px-6 pt-14 lg:px-8">
+                <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                    aria-hidden="true">
+                    <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#111111] to-[#23a3df] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                    </div>
+                </div>
+                <div class="mx-auto max-w-5xl  py-20">
+                    <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                        <div
+                            class="relative rounded-full px-3 py-1 text-sm leading-6 text-white ring-1 font-bold ring-[#2096b6]">
+                            Announcing Aero2Astro for Construction. 
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h1 class="text-4xl  font-bold leading-8 text-white  sm:text-6xl">Manage projects and stay on track with geospatial data</h1>
+                        <p class="mt-6 text-lg leading-8 text-white">Plan projects, track construction progress and ensure quality control throughout the project lifecycle.
+                        </p>
+                        <div class="mt-10 flex items-center justify-center gap-x-6">
+                            <a href="contact.html"
+                                class="rounded-md bg-[#2096b6] hover:bg-[#166b92] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Request
+                               Free Demo</a>
+                 
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+                    aria-hidden="true">
+                    <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#111111] to-[#23a3df] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Roadways railways tabs -->
+        <div class="lg:mt-32 mt-10">
+            <h2 class=" md:text-6xl text-3xl font-bold text-center text-white">
+                Our   <span  class="text-[#23a3df]">Service</span>  Sectors
+            </h2>
+        </div>
+
+        <div class=" py-10">
+
+            <div class="grid p-5 py-10 bg-[#111111] md:grid-cols-4 grid-cols-2 lg:px-36 text-center gap-5 my-10">
+                <div class="tab-button   p-4 md:text-xl text-xs border border-[#23a3df] cursor-pointer rounded-lg hover:bg-gradient-to-r hover:from-[#111111] hover:to-[#23a3df] text-white font-bold transition-all duration-300"
+                    data-tab="roadways">
+                    Roadways
+                </div>
+                <div class="tab-button p-4 md:text-xl text-xs border border-[#23a3df] cursor-pointer  rounded-lg hover:bg-gradient-to-r hover:from-[#111111] hover:to-[#23a3df] text-white font-bold transition-all duration-300"
+                    data-tab="railways">
+                    Railways
+                </div>
+                <div class="tab-button p-4 md:text-xl text-xs border border-[#23a3df] cursor-pointer  rounded-lg hover:bg-gradient-to-r hover:from-[#111111] hover:to-[#23a3df] text-white font-bold transition-all duration-300"
+                    data-tab="industrial">
+                    Industrial Building
+                </div>
+                <div class="tab-button p-4 md:text-xl text-xs border border-[#23a3df] cursor-pointer rounded-lg hover:bg-gradient-to-r hover:from-[#111111] hover:to-[#23a3df] text-white font-bold transition-all duration-300"
+                    data-tab="residential">
+                    Commercial Building
+                </div>
+            </div>
+
+            <div class="lg:mx-28 mx-5 rounded-lg  text-white">
+                <div id="roadways" class="tab-content py-6 md:px-8 rounded-b-lg">
+                    <!-- Section 1: Pre-Bid Planning & Designing -->
+                    <div class="lg:py-8 px-3 rounded">
+                        <section class="flex relative justify-between items-center flex-wrap lg:justify-center">
+                            <div class="md:w-1/2 md:p-8">
+                                <h2 id="prod-title" class="text-[#23a3df] text-lg font-bold mb-4">Pre-Bid Planning & Designing</h2>
+                                <h3 id="prod-subtitle" class="md:text-4xl font-bold text-3xl mb-4" data-aos-duration="1000" data-aos="zoom-in">
+                                    Innovative Drone Project Planning & Design
+                                </h3>
+                                <p id="prod-text" class="mb-6">
+                                    <ul class="list-disc flex-col text-gray-300 md:text-lg flex">
+                                        <li>Customized planning solutions tailored to road project requirements using drone technology.</li>
+                                        <li>Budget-friendly solutions without compromising on quality for road projects.</li>
+                                        <li>Adherence to industry standards and regulations specific to roadways.</li>
+                                        <li>Efficient processes ensuring timely completion of roadway projects.</li>
+                                        <li>Ongoing support and consultation throughout the road project lifecycle.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="w-full my-10 md:w-1/2  md:p-8 flex justify-center">
+                                <!-- Image space (Placeholder) -->
+                                <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                                    <img src="https://ik.imagekit.io/a2akit/a2atech/infra1.jpg" loading="lazy" class="text-gray-500" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                
+                    <!-- Section 2: Monitoring -->
+                    <div class="lg:py-8 px-6 my-10">
+                        <section class="flex relative flex-row-reverse justify-between items-center flex-wrap lg:justify-center">
+                            <div class="md:w-1/2 md:p-8">
+                                <h2 id="prod-title" class="text-[#23a3df] font-bold text-lg mb-4">Monitoring</h2>
+                                <h3 id="prod-subtitle" class="md:text-4xl font-bold text-3xl mb-4" data-aos-duration="1000" data-aos="zoom-in">
+                                    Comprehensive Asset Management & Monitoring Solutions
+                                </h3>
+                                <p id="prod-text" class="text-gray-400 mb-6">
+                                    <ul class="list-disc flex-col text-gray-300 md:text-lg flex">
+                                        <li>Real-time asset tracking to ensure optimal performance and utilization of roadway assets.</li>
+                                        <li>High-resolution imagery and data collection for accurate analysis of road infrastructure.</li>
+                                        <li>Integrated software solutions for seamless asset management and monitoring of roadways.</li>
+                                        <li>User-friendly interfaces for efficient monitoring and control of road projects.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="w-full my-10 md:w-1/2 md:p-8 flex justify-center">
+                                <!-- Image space (Placeholder) -->
+                                <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                                    <img src="https://ik.imagekit.io/a2akit/a2atech/cons1.jpg" loading="lazy" class="text-gray-500" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                
+                    <!-- Section 3: Operation & Maintenance -->
+                    <div class="lg:py-8 px-6 my-10 rounded">
+                        <section class="flex relative justify-between items-center flex-wrap lg:justify-center">
+                            <div class="md:w-1/2 md:p-8">
+                                <h2 id="prod-title" class="text-[#23a3df] text-lg font-bold mb-4">Operation & Maintenance</h2>
+                                <h3 id="prod-subtitle" class="md:text-4xl font-bold text-3xl mb-4" data-aos-duration="1000" data-aos="zoom-in">
+                                    Expert Operation & Maintenance Services
+                                </h3>
+                                <p id="prod-text" class="text-gray-400 mb-6">
+                                    <ul class="list-disc flex-col text-gray-300 md:text-lg flex">
+                                        <li>Scheduled preventive maintenance to avoid unexpected downtimes in road operations.</li>
+                                        <li>Advanced diagnostics and repair services for all types of road infrastructure.</li>
+                                        <li>Energy management solutions to enhance operational efficiency of road assets.</li>
+                                        <li>Tailored maintenance programs to meet specific operational needs of roadways.</li>
+                                        <li>Continuous monitoring to ensure compliance with safety standards in road operations.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="w-full my-10 md:w-1/2 md:p-8 flex justify-center">
+                                <!-- Image space (Placeholder) -->
+                                <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                                    <img src="https://ik.imagekit.io/a2akit/a2atech/infra3.jpg"  loading="lazy" class="text-gray-500">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                
+                
+
+            </div>
+
+            <div class="lg:mx-28 mx-5 rounded-lg  text-white">
+                <div id="railways" class="tab-content hidden py-6 md:px-8 rounded-b-lg shadow-lg">
+                    <!-- Section 1: Railways Planning & Designing -->
+                    <div class="lg:py-8 px-3 rounded">
+                        <section class="flex relative justify-between items-center flex-wrap lg:justify-center">
+                            <div class="md:w-1/2 md:p-8">
+                                <h2 id="prod-title" class="text-[#23a3df] text-lg font-bold mb-4">Railways Planning & Designing</h2>
+                                <h3 id="prod-subtitle" class="md:text-4xl font-bold text-3xl mb-4" data-aos-duration="1000" data-aos="zoom-in">
+                                    Innovative Railway Project Planning & Design
+                                </h3>
+                                <p id="prod-text" class="mb-6">
+                                    <ul class="list-disc flex-col  text-gray-300 md:text-lg flex">
+                                        <li>Tailored planning and design solutions for railway infrastructure using drone technology.</li>
+                                        <li>Cost-effective solutions without compromising on quality for railway projects.</li>
+                                        <li>Adherence to industry-specific standards and regulatory requirements.</li>
+                                        <li>Efficient processes ensuring timely completion of railway projects.</li>
+                                        <li>Continuous support and consultation throughout the project lifecycle.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="w-full my-10 md:w-1/2 md:p-8 flex justify-center">
+                                <!-- Image space -->
+                                <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                                    <img src="https://ik.imagekit.io/a2akit/a2atech/railwayCons.jpg" loading="lazy" class="text-gray-500" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                
+                    <!-- Section 2: Railway Monitoring Solutions -->
+                    <div class="lg:py-8 px-3 my-10 rounded">
+                        <section class="flex relative flex-row-reverse justify-between items-center flex-wrap lg:justify-center">
+                            <div class="md:w-1/2 md:p-8">
+                                <h2 id="prod-title" class="text-[#23a3df] font-bold text-lg mb-4">Railway Monitoring Solutions</h2>
+                                <h3 id="prod-subtitle" class="md:text-4xl font-bold text-3xl mb-4" data-aos-duration="1000" data-aos="zoom-in">
+                                    Comprehensive Drone-Based Monitoring for Railways
+                                </h3>
+                                <p id="prod-text" class="text-gray-400 mb-6">
+                                    <ul class="list-disc flex-col  text-gray-300 md:text-lg flex">
+                                        <li>Real-time asset tracking and monitoring using drone technology.</li>
+                                        <li>High-resolution imagery and data analytics for precise railway infrastructure analysis.</li>
+                                        <li>Integrated software solutions for efficient asset management and monitoring.</li>
+                                        <li>User-friendly interfaces for intuitive monitoring and control of railway assets.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="w-full my-10 md:w-1/2 md:p-8 flex justify-center">
+                                <!-- Image space -->
+                                <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                                    <img src="https://ik.imagekit.io/a2akit/a2atech/droneMonitor.jpg" loading="lazy" class="text-gray-500" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                
+                    <!-- Section 3: Railway Operation & Maintenance -->
+                    <div class="lg:py-8 px-3 my-10 rounded">
+                        <section class="flex relative justify-between items-center flex-wrap lg:justify-center">
+                            <div class="md:w-1/2 md:p-8">
+                                <h2 id="prod-title" class="text-[#23a3df] text-lg font-bold mb-4">Railway Operation & Maintenance</h2>
+                                <h3 id="prod-subtitle" class="md:text-4xl font-bold text-3xl mb-4" data-aos-duration="1000" data-aos="zoom-in">
+                                    Expert Drone-Enabled Maintenance Services for Railways
+                                </h3>
+                                <p id="prod-text" class="text-gray-400 mb-6">
+                                    <ul class="list-disc flex-col  text-gray-300 md:text-lg flex">
+                                        <li>Proactive maintenance programs leveraging drone technology for railway uptime.</li>
+                                        <li>Advanced diagnostics and repair services for all railway infrastructure types.</li>
+                                        <li>Energy management solutions to enhance operational efficiency of railway assets.</li>
+                                        <li>Customized maintenance plans tailored to specific railway operational needs.</li>
+                                        <li>Continuous monitoring to ensure compliance with railway safety standards.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="w-full my-10 md:w-1/2 md:p-8 flex justify-center">
+                                <!-- Image space -->
+                                <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                                    <img src="https://ik.imagekit.io/a2akit/a2atech/infra3.jpg" loading="lazy" class="text-gray-500" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <div class="lg:mx-28 mx-5 rounded-lg  text-white">
+                <div id="industrial" class="tab-content hidden py-6 md:px-8 rounded-b-lg shadow-lg">
+                    <!-- Section 1: Pre-bid Planning & Designing -->
+                    <div class="lg:py-8 px-3 rounded">
+                        <section class="flex relative justify-between items-center flex-wrap lg:justify-center">
+                            <div class="md:w-1/2 md:p-8">
+                                <h2 id="prod-title" class="text-[#23a3df] text-lg font-bold mb-4">Pre-bid Planning & Designing</h2>
+                                <h3 id="prod-subtitle" class="md:text-4xl font-bold text-3xl mb-4" data-aos-duration="1000" data-aos="zoom-in">
+                                    Tailored Planning Solutions for Industrial Drone Projects
+                                </h3>
+                                <p id="prod-text" class="text-gray-400 mb-6">
+                                    <ul class="list-disc flex-col gap-3 text-gray-300 md:text-lg">
+                                        <li>Customized planning solutions optimized for industrial drone operations.</li>
+                                        <li>Feasibility studies and site assessments using drone technology.</li>
+                                        <li>Integration of drone data for enhanced project insights and compliance.</li>
+                                        <li>Expertise in optimizing flight plans and data collection for efficiency.</li>
+                                        <li>Continuous consultation and support throughout project planning and deployment.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="w-full my-10 md:w-1/2 md:p-8 flex justify-center">
+                                <!-- Image space -->
+                                <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                                    <img src="https://ik.imagekit.io/a2akit/a2atech/indusCons.jpg" loading="lazy" class="text-gray-500" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                
+                    <!-- Section 2: Monitoring -->
+                    <div class="lg:py-8 px-3 my-10 rounded">
+                        <section class="flex relative flex-row-reverse justify-between items-center flex-wrap lg:justify-center">
+                            <div class="md:w-1/2 md:p-8">
+                                <h2 id="prod-title" class="text-[#23a3df] text-lg font-bold mb-4">Real-time Monitoring</h2>
+                                <h3 id="prod-subtitle" class="md:text-4xl font-bold text-3xl mb-4" data-aos-duration="1000" data-aos="zoom-in">
+                                    Advanced Drone Monitoring Solutions for Industrial Operations
+                                </h3>
+                                <p id="prod-text" class="text-gray-400 mb-6">
+                                    <ul class="list-disc flex-col gap-3 text-gray-300 md:text-lg">
+                                        <li>Real-time monitoring using drone technology for industrial facilities.</li>
+                                        <li>Data-driven insights and analytics to optimize operational efficiency.</li>
+                                        <li>Customizable alerts and notifications for proactive maintenance.</li>
+                                        <li>Integration with asset management software for seamless operations.</li>
+                                        <li>Comprehensive reporting and analysis for informed decision-making.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="w-full my-10 md:w-1/2 md:p-8 flex justify-center">
+                                <!-- Image space -->
+                                <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                                    <img src="https://ik.imagekit.io/a2akit/a2atech/infra2.jpg" loading="lazy" class="text-gray-500" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                
+                    <!-- Section 3: Operation & Maintenance -->
+                    <div class="lg:py-8 px-3 my-10 rounded">
+                        <section class="flex relative justify-between items-center flex-wrap lg:justify-center">
+                            <div class="md:w-1/2 md:p-8">
+                                <h2 id="prod-title" class="text-[#23a3df] text-lg font-bold mb-4">Operation & Maintenance</h2>
+                                <h3 id="prod-subtitle" class="md:text-4xl font-bold text-3xl mb-4" data-aos-duration="1000" data-aos="zoom-in">
+                                    Drone-based Maintenance Services for Industrial Facilities
+                                </h3>
+                                <p id="prod-text" class="text-gray-400 mb-6">
+                                    <ul class="list-disc flex-col gap-3 text-gray-300 md:text-lg">
+                                        <li>Proactive drone-based maintenance programs for industrial uptime.</li>
+                                        <li>Regular inspections and predictive maintenance leveraging drone technology.</li>
+                                        <li>Energy efficiency audits and optimization recommendations.</li>
+                                        <li>Tailored maintenance plans integrating drone data for effective asset management.</li>
+                                        <li>24/7 emergency response services using drone-enabled rapid deployment.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="w-full my-10 md:w-1/2 md:p-8 flex justify-center">
+                                <!-- Image space -->
+                                <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                                    <img src="https://ik.imagekit.io/a2akit/a2atech/cons1.jpg" loading="lazy" class="text-gray-500" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                
+                
+                
+                
+            </div>
+
+            <div class="lg:mx-28 mx-5 rounded-lg  text-white">
+                <div id="residential" class="tab-content hidden py-6 md:px-8 rounded-b-lg shadow-lg">
+                    <!-- Section 1: Pre-Bid Planning & Designing -->
+                    <div class="lg:py-8 px-3 rounded">
+                        <section class="flex relative justify-between items-center flex-wrap lg:justify-center">
+                            <div class="md:w-1/2 md:p-8">
+                                <h2 id="prod-title" class="text-[#23a3df] text-lg font-bold mb-4">Pre-Bid Planning & Designing</h2>
+                                <h3 id="prod-subtitle" class="md:text-4xl font-bold text-3xl mb-4" data-aos-duration="1000" data-aos="zoom-in">
+                                    Innovative Residential Project Planning & Design
+                                </h3>
+                                <p id="prod-text" class="text-gray-400 mb-6">
+                                    <ul class="list-disc flex-col gap-3 text-gray-300 md:text-lg">
+                                        <li>Customized planning and design solutions for residential projects.</li>
+                                        <li>Integration of drone technology for aerial surveys and site analysis.</li>
+                                        <li>Ensuring compliance with local building codes and regulations.</li>
+                                        <li>Collaborative approach to align client expectations with project outcomes.</li>
+                                        <li>Expertise in creating efficient and sustainable living environments.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="w-full my-10 md:w-1/2 md:p-8 flex justify-center">
+                                <!-- Image space -->
+                                <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                                    <img src="https://ik.imagekit.io/a2akit/a2atech/residCons.jpg" loading="lazy" class="text-gray-500" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                
+                    <!-- Section 2: Monitoring -->
+                    <div class="lg:py-8 px-3 my-10 rounded">
+                        <section class="flex relative flex-row-reverse justify-between items-center flex-wrap lg:justify-center">
+                            <div class="md:w-1/2 md:p-8">
+                                <h2 id="prod-title" class="text-[#23a3df] text-lg font-bold mb-4">Monitoring</h2>
+                                <h3 id="prod-subtitle" class="md:text-4xl font-bold text-3xl mb-4" data-aos-duration="1000" data-aos="zoom-in">
+                                    Comprehensive Residential Monitoring Solutions
+                                </h3>
+                                <p id="prod-text" class="text-gray-400 mb-6">
+                                    <ul class="list-disc flex-col gap-3 text-gray-300 md:text-lg">
+                                        <li>Real-time monitoring using drone technology for enhanced property surveillance.</li>
+                                        <li>Data-driven insights and analytics for proactive maintenance.</li>
+                                        <li>Integration of AI for predictive analysis and anomaly detection.</li>
+                                        <li>User-friendly interface for easy access to monitoring data.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="w-full my-10 md:w-1/2 md:p-8 flex justify-center">
+                                <!-- Image space -->
+                                <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                                    <img src="https://ik.imagekit.io/a2akit/a2atech/cons1.jpg" loading="lazy" class="text-gray-500" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                
+                    <!-- Section 3: Operation & Maintenance -->
+                    <div class="lg:py-8 px-3 my-10 rounded">
+                        <section class="flex relative justify-between items-center flex-wrap lg:justify-center">
+                            <div class="md:w-1/2 md:p-8">
+                                <h2 id="prod-title" class="text-[#23a3df] text-lg font-bold mb-4">Operation & Maintenance</h2>
+                                <h3 id="prod-subtitle" class="md:text-4xl font-bold text-3xl mb-4" data-aos-duration="1000" data-aos="zoom-in">
+                                    Expert Residential Operation & Maintenance Services
+                                </h3>
+                                <p id="prod-text" class="text-gray-400 mb-6">
+                                    <ul class="list-disc flex-col gap-3 text-gray-300 md:text-lg">
+                                        <li>Routine maintenance and inspections using drone technology.</li>
+                                        <li>Diagnostic assessments and predictive maintenance strategies.</li>
+                                        <li>Energy efficiency audits and optimization solutions.</li>
+                                        <li>Customized maintenance plans tailored to residential property needs.</li>
+                                        <li>Continuous monitoring to ensure compliance with safety and quality standards.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="w-full my-10 md:w-1/2 md:p-8 flex justify-center">
+                                <!-- Image space -->
+                                <div id="prod-image" class="w-full h-84  flex items-center justify-center rounded-lg overflow-hidden">
+                                    <img src="https://ik.imagekit.io/a2akit/a2atech/infra3.jpg" loading="lazy" class="text-gray-500" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <style>
+            .tabs-content {
+                background: linear-gradient(15deg, #1c1c1c, #111111, #23a3df);
+            }
+        </style>
+
+
+        </div>
+
+        <style>
+            .tab-button {
+                transition: all 0.3s ease;
+            }
+
+
+            .tab-content {
+                transition: opacity 0.3s ease;
+            }
+
+            .tab-content.hidden {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .tabs-content {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        </style>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const tabs = document.querySelectorAll('.tab-button');
+                const contents = document.querySelectorAll('.tab-content');
+
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        tabs.forEach(t => t.classList.remove('bg-gradient-to-r', 'from-[#111111]', 'to-[#23a3df]'));
+                        contents.forEach(content => content.classList.add('hidden'));
+
+                        tab.classList.add('bg-gradient-to-r', 'from-[#111111]', 'to-[#23a3df]');
+                        const activeTabContent = document.getElementById(tab.getAttribute('data-tab'));
+                        activeTabContent.classList.remove('hidden');
+                    });
+                });
+
+                tabs[0].click();
+            });
+        </script>
+
+
+
+
+        <!-- Tab 2 Content -->
+
+        <div class="my-10  lg:mx-20 relative z-20">
+            <!-- Tabs -->
+
+            <div class="grid gridc lg:grid-cols-4 lg:mx-28 md:text-center grid-cols-2 gap-5 p-5">
+
+                <div id="tab1"
+                    class="max-sm:text-xs tabc-active inline-flex items-center justify-center font-semibold cursor-pointer hover:text-[#23a3df] bg-[#111111]
+                     rounded border-b p-2 border-b-4 ">
+                    Engineering & Infrastructure
+                </div>
+                <div id="tab2"
+                    class="max-sm:text-xs inline-flex items-center justify-center font-semibold cursor-pointer hover:text-[#23a3df] bg-[#111111] rounded border-b py-4 p-5 border-b-4 ">
+                    Architectural Construction 
+                </div>
+                <div id="tab3"
+                    class="max-sm:text-xs inline-flex items-center justify-center font-semibold cursor-pointer hover:text-[#23a3df] bg-[#111111] rounded border-b py-4 p-5 border-b-4 ">
+                    Residential Contruction
+                </div>
+                <div id="tab4"
+                    class="max-sm:text-xs inline-flex items-center justify-center font-semibold cursor-pointer hover:text-[#23a3df] bg-[#111111] rounded border-b py-4 p-5 border-b-4 ">
+                    Commercial Construction
+                </div>
+            </div>
+
+            <!-- Content AREA -->
+            <div class=" my-5 p-5 ">
+
+                <div id="content1"
+                    class="flex flex-wrap tabc-content  flex-wrap-reverse gap-10 justify-center ">
+
+                    <ul class="p-4 lg:max-w-[600px] max-w-[300px]">
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Select sites for Projects</li>
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Create 3D terrain models for project planning</li>
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Create 2D terrain models for project planning
+                        </li>
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Take measurements for projects activities
+                        </li>
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Visualize and communicate design concepts with 2D and 3D models
+                        </li>
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Track construction progress through 2D and 3D maps and models </li>
+                    </ul>
+                    <!-- image  -->
+                    <img loading="lazy" src="https://ik.imagekit.io/a2akit/a2atech/infraeng.jpg" class="min-w-[300px] flex-grow max-w-[500px] h-[350px] " />
+
+                </div>
+
+
+                <div id="content2"
+                    class="flex flex-wrap tabc-content tabc-content-hidden flex-wrap-reverse gap-10 justify-center ">
+
+                    <ul class="p-4 lg:max-w-[600px] max-w-[300px]">
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Use geospatial data to inform urban planning</li>
+                        <li class="flex items-center gap-4 md:text-xl text-lg"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Utilize detailed as-built documentation for renovation projects
+                        </li>
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Create 3D architectural models for design communication
+                        </li>
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+
+                            Conduct facade analysis for condition assessments
+                        </li>
+
+                    </ul>
+                    <!-- image  -->
+                    <img loading="lazy" src="https://ik.imagekit.io/a2akit/a2atech/infraArch.jpg" class="min-w-[300px] flex-grow max-w-[500px] h-[350px] " />
+
+                </div>
+
+                <!-- content tab3 -->
+                <div id="content3"
+                    class="flex flex-wrap tabc-content tabc-content-hidden flex-wrap-reverse gap-10 justify-center ">
+
+                    <ul class="p-4 lg:max-w-[600px] max-w-[300px]">
+                        <li class="flex items-center gap-4 md:text-xl text-lg break-words my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Use geospatial data for residential development site selection
+                        </li>
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Track progress over a sites’ development lifecycle
+                        </li>
+                        <li class="flex items-center gap-4 md:text-xl text-lg "><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Defect detection and quality control by identifying issues, errors, or inconsistencies
+                            during construction
+
+                        </li>
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+
+                            Assess and create level, dilapidation and inspection reports, and safety checks
+                        </li>
+
+                    </ul>
+                    <!-- image  -->
+                    <img loading="lazy" src="https://ik.imagekit.io/a2akit/a2atech/residCons.jpg" class="min-w-[300px] flex-grow max-w-[500px] h-[350px] " />
+
+
+                </div>
+                <!-- content tab4 -->
+                <div id="content4"
+                    class="flex flex-wrap tabc-content tabc-content-hidden flex-wrap-reverse gap-10 justify-center ">
+
+                    <ul class="p-4 lg:max-w-[600px] max-w-[300px]">
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Create site plans for project documentation and compliance
+                        </li>
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Use geospatial data for commercial building site selection
+                        </li>
+                        <li class="flex items-center gap-4 md:text-xl text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+                            Defect detection and quality control by identifying issues, errors, or inconsistencies
+                            during construction
+
+                        </li>
+                        <li class="flex items-center gap-4 md:text-xl mt text-lg my-2"><span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#28a745" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-check my-3">
+                                    <path d="M20 6L9 17L4 12"></path>
+                                </svg>
+
+                            </span>
+
+                            Assess and create level, dilapidation and inspection reports, and safety checks
+                        </li>
+
+                    </ul>
+                    <!-- image  -->
+                    <img loading="lazy" src="https://ik.imagekit.io/a2akit/a2atech/indusCons.jpg" class="min-w-[300px] flex-grow max-w-[500px] h-[350px] " />
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+        
+
+        <!-- CTA -->
+
+        <div class="">
+            <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+                <div
+                    class="relative isolate overflow-hidden bg-[#111111] px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+                    <svg viewBox="0 0 1024 1024"
+                        class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+                        aria-hidden="true">
+                        <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                            fill-opacity="0.7" />
+                        <defs>
+                            <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                                <stop stop-color="#7775D6" />
+                                <stop offset="1" stop-color="#23a3df" />
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                    <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+                        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Boost your construction work.<br>Start using platform today.</h2>
+                        <p class="mt-6 text-lg leading-8 text-gray-300">With geospatial data, Assets management, reports and visualized with Aero2Astro .</p>
+                        <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+                            <a href="contact.html"
+                                class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                                Book Demo</a>
+                            
+                        </div>
+                    </div>
+                    <div class="relative mt-16 h-80 lg:mt-8">
+                        <img class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+                            src="https://ik.imagekit.io/a2akit/a2atech/cons1.jpg" loading="lazy"
+                            alt="App screenshot" width="1824" height="1080">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <style>
+        .tabc-content-hidden {
+            display: none;
+        }
+
+        .tabc-active {
+            color: #2cace7 !important;
+            border-color: #23a3df;
+        }
+    </style>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.gridc > div');
+            const contents = document.querySelectorAll('.tabc-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    tabs.forEach(t => t.classList.remove('tabc-active'));
+                    contents.forEach(c => c.classList.add('tabc-content-hidden'));
+
+                    this.classList.add('tabc-active');
+                    const contentId = this.id.replace('tab', 'content');
+                    document.getElementById(contentId).classList.remove('tabc-content-hidden');
+                });
+            });
+        });
+
+    </script>
+
+
+
+
+
+    <div id="footer">
+        
+
+        <footer class=" bg-[#0a0a09] text-white ">
+            <div class=" py-10 p-5 lg:px-20 md:px-10 mx-auto flex flex-col md:flex-row justify-between">
+              <div class="mb-8 md:mb-0">
+                <h1 class="text-2xl font-bold text-white mb-2">
+                  <span class="text-[#209dd8]">#</span>aero<span class="text-[#209dd8] m-0">2</span>astro
+                </h1>
+                <p class="text-gray-400">Think. Innovate. Explore.</p>
+                <blockquote class="mt-4 text-gray-500 max-w-[400px]">
+                 
+                  "Outstanding people have one thing in common: an absolute sense of mission
+      -Zig Ziglar"
+                  <br />
+                  <br />
+      
+                 
+                </blockquote>
+                 <a href="mailto:flywithus@aero2astro.com" class=" mt-5 block font-bold text-[#209dd8]"><MailFilled class="mr-2"/>flywithus@aero2astro.com</a>
+                
+              </div>
+              <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-20 md:mr-20">
+                <div>
+                  <h2 class="text-gray-400 mb-4">CORPORATE</h2>
+                  <ul class="space-y-2">
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/contact" class="text-white hover:text-gray-400">Contact Us</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/corporate/Careers" class="text-white hover:text-gray-400">Careers</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/corporate/Internship" class="text-white hover:text-gray-400">Internships</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/contact/appointment" class="text-white hover:text-gray-400">Schedule an appointment</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 class="text-gray-400 mb-4">INNOVATION LABZ</h2>
+                  <ul class="space-y-2">
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Shop</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/mayvi" class="text-white hover:text-gray-400">Mayvi</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Learn to fly</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Aeromodelling Club</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h2 class="text-gray-400 mb-4">TERMS</h2>
+                  <ul class="space-y-2">
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Privacy Policy</a></li>
+                    <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Cookies Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+              <div class="p-5 md:px-10 border-t-[1px] border-t-[#209dd8]">
+                <p class="font-thin text-center">Copyright &copy; 2024 <a target="_blank" href="https://aero2astro.com" class="font-semibold text-[#209dd8]">
+                Aero2Astro </a></p>
+              </div>
+      
+        
+      
+      </footer>
+          
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+
+</html>
