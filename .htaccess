@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Redirect www to non-www and force HTTPS
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.aero2astro\.com$ [NC]
+RewriteRule ^(.*)$ https://aero2astro.com/$1 [L,R=301]
+
+# Redirect index.html to root
+RewriteCond %{THE_REQUEST} \s/+index\.html [NC]
+RewriteRule ^index\.html$ https://aero2astro.com/ [L,R=301]
