@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, follow">
+    <title>Page Not Found - Aero2Astro Tech </title>
+    <link rel="canonical" href="https://aero2astro.com/404.html" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="solutions.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <script defer src="./assets/js/header.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="solutions.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+
+<body class="max-w-[2000px]">
+    <div id="headercontainer" class="w-full bg-[#080808] text-white sticky z-50 top-0 ">
+      
+  <header class="z-50 h-42 border-b border-b-[#2096b6]  shadow-md lg:pr-16 ">
+    <div class=" flex justify-between items-center py-4 px-6">
+    
+        <a href="/" class="flex items-center relative md:w-[250px] w-[200px] h-14  overflow-clip ">
+            <img src="https://ik.imagekit.io/a2akit/a2atech/a2alogo.png" alt="A2A-Logo" class=" z-50 scale-125 ">
+        </a>
+        <nav id="navbar" class="hidden lg:flex space-x-8 items-center">
+            <a class="nav-link text-white hover:text-[#2096b6]" href="/">Home</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" href="about.html">About</a>
+            <div class="relative group">
+                <button class="nav-link text-white hover:text-[#2096b6] flex items-center">
+                    Solutions <i class="ml-1 fas fa-chevron-down"></i>
+                </button>
+                <div class="absolute left-0 z-40 top-4 mt-1 hidden group-hover:block bg-white shadow-md rounded-md">
+                    <a href="./engineering.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Engineering</a>
+                    <a href="./construction.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Construction</a>
+                    <a href="./operation.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Operation</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <button class="nav-link text-white hover:text-[#2096b6] flex items-center">
+                    Industries <i class="ml-1 fas fa-chevron-down"></i>
+                </button>
+                <div  class="absolute left-0 z-40 top-4 mt-1 hidden group-hover:block bg-white shadow-md rounded-md">
+                    <a href="infra.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Infrastructure/Construction</a>
+                    <a href="mining.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Mining</a>
+                    <a href="energy.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Energy</a>
+                    <a href="utilities.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Utilities</a>
+                </div>
+            </div>
+            <a class="nav-link text-white hover:text-[#2096b6]" href="comingsoon.html">Pricing</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" target="_blank" href="https://dronepilots.aero2astro.com">For Pilot</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" target="_blank" href="https://aero2astro.com/a2a/blog/">Blogs</a>
+            <a class="nav-link text-white hover:text-[#2096b6]" href="contact.html">Contact Us</a>
+            <a class="getstarted text-white bg-[#111111] border border-[#23a3df] rounded-3xl hover:bg-[#1c1c1c] px-4 py-2 " href="contact.html" onclick="ShowForm()">Get In Touch</a>
+        </nav>
+        <button id="menu-button" class="lg:hidden text-white text-2xl focus:outline-none">
+            <i class="fa fa-bars"></i>
+        </button>
+    </div>
+    <div id="mobile-menu" class="lg:hidden hidden shadow-md">
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="/">Home</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="about.html">About</a>
+        <div class="relative group">
+            <button class="block w-full text-left px-4 py-2 text-white hover:bg-[#1c1c1c] flex items-center justify-between">
+                Solutions <i class="ml-1 fas fa-chevron-down"></i>
+            </button>
+            <div class="hidden group-hover:block bg-[#111111] shadow-md rounded-md">
+                <a href="./engineering.html" class="block px-4 py-2 text-white hover:bg-gray-200">Engineering</a>
+                <a href="./construction.html" class="block px-4 py-2 text-white hover:bg-gray-200">Construction</a>
+                <a href="./operation.html" class="block px-4 py-2 text-white hover:bg-gray-200">Operation</a>
+               
+            </div>
+        </div>
+        <div class="relative group">
+            <button class="block w-full text-left px-4 py-2 text-white hover:bg-[#1c1c1c] flex items-center justify-between">
+                Industries <i class="ml-1 fas fa-chevron-down"></i>
+            </button>
+            <div class="hidden group-hover:block bg-[#111111] shadow-md rounded-md">
+                <a href="infra.html" class="block px-4 py-2 text-white hover:bg-gray-200">Infrastructure/Construction</a>
+                <a href="mining.html" class="block px-4 py-2 text-white hover:bg-gray-200">Mining</a>
+                <a href="energy.html" class="block px-4 py-2 text-white hover:bg-gray-200">Energy</a>
+                <a href="utilities.html" class="block px-4 py-2 text-white hover:bg-gray-200">Utilities</a>
+            </div>
+        </div>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="./comingsoon.html">Pricing</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" target="_blank" href="https://dronepilots.aero2astro.com/">For Pilot</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" target="_blank" href="https://aero2astro.com/home/blog/">Blogs</a>
+        <a class="block px-4 py-2 text-white hover:bg-gray-200" href="contact.html">Contact Us</a>
+        <a class="block px-4 py-2 text-white my-5 mx-2 max-w-[200px] bg-[#111111] border border-[#23a3df] rounded-3xl hover:bg-blue-600" href="contact.html" onclick="ShowForm()">Get In Touch</a>
+    </div>
+</header>
+
+    </div>
+
+    <main class="grid min-h-full bg-[#080808] place-items-center  px-6 py-24 sm:py-32 lg:px-8">
+        <div class="text-center">
+          
+          <h1 class="mt-4 text-3xl font-bold tracking-tight text-[#23a3df] sm:text-5xl">404 - Page Not Found</h1>
+          <p class="mt-6 text-base leading-7 text-gray-300">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="/" class="rounded-md bg-[#23a3df] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ">Go back home</a>
+            <a href="contact.html" class="text-sm font-semibold text-gray-300">Contact us <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+      </main>
+
+
+<div id="footer">
+  
+
+  <footer class=" bg-[#0a0a09] text-white ">
+    <div class=" py-10 p-5 lg:px-20 md:px-10 mx-auto flex flex-col md:flex-row justify-between">
+      <div class="mb-8 md:mb-0">
+        <h1 class="text-2xl font-bold text-white mb-2">
+          <span class="text-[#209dd8]">#</span>aero<span class="text-[#209dd8] m-0">2</span>astro
+        </h1>
+        <p class="text-gray-400">Think. Innovate. Explore.</p>
+        <blockquote class="mt-4 text-gray-500 max-w-[400px]">
+         
+          "Outstanding people have one thing in common: an absolute sense of mission
+-Zig Ziglar"
+          <br />
+          <br />
+
+         
+        </blockquote>
+         <a href="mailto:flywithus@aero2astro.com" class=" mt-5 block font-bold text-[#209dd8]"><MailFilled class="mr-2"/>flywithus@aero2astro.com</a>
+        
+      </div>
+      <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-20 md:mr-20">
+        <div>
+          <h2 class="text-gray-400 mb-4">CORPORATE</h2>
+          <ul class="space-y-2">
+            <li><a target="_blank" href="https://aero2astro.com/a2a/contact" class="text-white hover:text-gray-400">Contact Us</a></li>
+            <li><a target="_blank" href="https://aero2astro.com/a2a/corporate/Careers" class="text-white hover:text-gray-400">Careers</a></li>
+            <li><a target="_blank" href="https://aero2astro.com/a2a/corporate/Internship" class="text-white hover:text-gray-400">Internships</a></li>
+            <li><a target="_blank" href="https://aero2astro.com/a2a/contact/appointment" class="text-white hover:text-gray-400">Schedule an appointment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-gray-400 mb-4">INNOVATION LABZ</h2>
+          <ul class="space-y-2">
+            <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Shop</a></li>
+            <li><a target="_blank" href="https://aero2astro.com/a2a/mayvi" class="text-white hover:text-gray-400">Mayvi</a></li>
+            <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Learn to fly</a></li>
+            <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Aeromodelling Club</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-gray-400 mb-4">TERMS</h2>
+          <ul class="space-y-2">
+            <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Privacy Policy</a></li>
+            <li><a target="_blank" href="https://aero2astro.com/a2a/soon" class="text-white hover:text-gray-400">Cookies Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      <div class="p-5 md:px-10 border-t-[1px] border-t-[#209dd8]">
+        <p class="font-thin text-center">Copyright &copy; 2024 <a target="_blank" href="https://aero2astro.com" class="font-semibold text-[#209dd8]">
+        Aero2Astro </a></p>
+      </div>
+
+
+
+</footer>
+  
+</div>
+</body>
+
+</html>
