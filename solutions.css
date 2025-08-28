@@ -2,7 +2,65 @@
 
 .scrollable-section {
     overflow: scroll;
-    
     white-space: nowrap;
+}
+
+.clip-polygon {
+    clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%);
+}
+
+.bg-dark-cyan-gradient {
+    background: linear-gradient(190deg, #1c1c1c,#1c1c1c, #075f7a);
+}
+
+.tab {
+    transition: border-bottom-color 0.3s ease;
+}
+
+.tab:hover {
+    background-color: #1c1c1c;
+    border-bottom-color: #23a3df;
+}
+
+.active-tab {
+    background-color: #1c1c1c;
+    border-bottom-color: #23a3df;
+}
+
+.project-description {
+    display: none;
+}
+
+.project-description.active {
+    display: block;
+}
+
+.tabs-content {
+    background: linear-gradient(15deg, #1c1c1c, #111111, #23a3df);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.tab-button {
+    transition: all 0.3s ease;
+}
+
+.tab-content {
+    transition: opacity 0.3s ease;
+}
+
+.tab-content.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tabc-content-hidden {
+    display: none;
+}
+
+.tabc-active {
+    color: #2cace7 !important;
+    border-color: #23a3df;
 }
 
