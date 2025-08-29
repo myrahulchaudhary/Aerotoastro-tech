@@ -36,15 +36,11 @@
     white-space: nowrap;
   }
   
-  .marquee {
-      display:  inline-block;
-      white-space: nowrap;
-      position: relative;
-      transform: translate3d(0%, 0, 0);
-      animation-name: marquee;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-  }
+.marquee {
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
   
   .marquee a {
       display:  inline-block;
@@ -52,19 +48,30 @@
       padding-right: 5.4rem;
   }
   
-  .marquee-wrapper:hover .marquee {
-      animation-play-state: paused !important;
-  }
+.marquee-wrapper:hover .marquee {
+    animation-play-state: paused !important;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 30s linear infinite;
+}
   
-  @keyframes marquee {
-      0% {
-          transform: translate3d(0%, 0, 0);
-      }
-  
-      100% {
-          transform: translate3d(-100%, 0, 0);
-      }
-  }
+@keyframes marquee {
+    0% {
+        transform: translate3d(0%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.bg-dark-gradient {
+    background: linear-gradient(190deg, #1c1c1c, #111111, #111111);
+}
 
 
 
